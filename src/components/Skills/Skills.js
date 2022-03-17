@@ -1,6 +1,6 @@
 import { Section, SectionTitle, Container, SectionText, SectionSubTitle} from '../../styles/GlobalComponents';
 import {SkillsContainer, BarContainer, Bar, Row, RowTextDiv} from './SkillsStyles';
-
+import Visible from '../Visible/Visible';
 const SkillBar = ({fill, languege}) => {
     return (
         <Row>
@@ -15,8 +15,9 @@ const SkillBar = ({fill, languege}) => {
 
 export default function Skills() {
     return (
-        <Section blue>
+        <Section blue id="skills">
             <Container>
+                <Visible label="Skills"></Visible>
                 <SectionTitle>Skills</SectionTitle>
                 <SectionText>
                     These are the technologies that I am most comfortable with.

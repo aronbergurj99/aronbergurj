@@ -13,10 +13,10 @@ export const Container = styled.div`
     padding: 1rem;
     padding-top: 2rem;
     z-index: 10;
+    padding-right: 2rem;
+    padding-left: 2rem;
 
     @media ${(props) => props.theme.breakpoints.sm} {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
         grid-column-gap: 0.5rem;
         grid-row-gap: 0.5rem;
     }
@@ -33,14 +33,15 @@ export const Div1 = styled.div`
 `;
 
 export const Div2 = styled.div`
-    grid-area: 1 / 3 / 2 / 6;
+    grid-area: 1 / 3 / 4 / 7;
     display: flex;
+    width: 100%;
     justify-content: space-around;
     @media ${(props) => props.theme.breakpoints.sm} {
         display: none;
     };
     @media ${(props) => props.theme.breakpoints.md} {
-        grid-area: 1 / 2 / 2 / 6;
+        grid-area: 1 / 2 / 1 / 6;
     }  
 `;
 
@@ -66,4 +67,18 @@ export const NavLink = styled.a`
   @media ${(props) => props.theme.breakpoints.sm} {
     //padding: 0.5rem;
   }
+`;
+
+export const LinkDiv = styled.div`
+    position: relative;
+`;
+
+export const TabSelected = styled.div`
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 2px;
+    background-color: ${(props) => props.theme.colors.yellow};
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
     display: flex;
     position: relative;
-    padding-top: 200px;
+    padding-top: 100px;
     margin: 0 auto;
     width: 100vw;
     min-height: 100vh;
@@ -68,13 +68,15 @@ export const SectionText = styled.p`
 `;
 
 export const SectionDivider = styled.div`
+    position: absolute;
+    z-index:2;
     aspect-ratio: 960/300;
     width:100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(/svgs/wave-haikei.svg);
-    transform: ${(props) => props.flip ? 'rotate(180deg)' : 'rotate(0)'}
+    transform: ${(props) => props.flip ? 'rotate(180deg) translate(0, 50%)' : 'rotate(0)'}
 `;
 
 export const SectionSubText = styled.p`

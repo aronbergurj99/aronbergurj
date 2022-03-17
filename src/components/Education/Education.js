@@ -1,9 +1,17 @@
 import { Section, SectionTitle, Container, SectionSubText, SectionSubTitle, SectionText} from "../../styles/GlobalComponents"
 import { Div1, Div2, Heading1, Text1, EducationContainer} from "./EducationStyles"
+import Visible from "../Visible/Visible"
+
 export default function Education() {
     return (
-        <Section blue front>
+        <Section 
+            blue
+            front
+            id="education"
+            
+            >
             <Container>
+                <Visible label="Education"></Visible>
                 <SectionTitle>Education</SectionTitle>
                 <EducationContainer>
                     <Div2>

@@ -1,11 +1,15 @@
 import { Section, SectionTitle, Container} from "../../styles/GlobalComponents";
 import { ProjectCard, GridContainer, Img} from "./ProjectsStyles";
 import { projects } from '../constants/constants';
+import Visible from "../Visible/Visible"
 
 export default function Projects() {
     return (
-        <Section>
+        <Section
+            id="projects"
+            >
             <Container>
+            <Visible label="Projects"></Visible>
             <SectionTitle>Projects</SectionTitle>
             <GridContainer>
                 
