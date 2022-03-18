@@ -18,6 +18,7 @@ export const EducationContainer = styled.div`
 export const Div1 = styled.div`
     display: flex;
     align-items: flex-end;
+    justify-contents: flex-end;
     @media ${(props) => props.theme.breakpoints.sm} {
         align-items: flex-start;
     }
@@ -37,9 +38,11 @@ export const Div2 = styled.div`
 export const Heading1 = styled.h3`
     font-weight: 400;
     font-size: 28px;
+    text-align: right;
+    line-height: 28px;
 `;
 
-export const Text1 = styled.p`
+export const Text1 = styled.h3`
     font-weight: 400;
     font-size: 20px;
 `;

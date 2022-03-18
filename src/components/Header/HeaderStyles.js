@@ -15,7 +15,7 @@ export const Container = styled.div`
     z-index: 10;
     padding-right: 2rem;
     padding-left: 2rem;
-
+    
     @media ${(props) => props.theme.breakpoints.sm} {
         grid-column-gap: 0.5rem;
         grid-row-gap: 0.5rem;
@@ -64,6 +64,7 @@ export const NavLink = styled.a`
     opacity: 1;
     cursor: pointer;
   }
+  color: white;
   @media ${(props) => props.theme.breakpoints.sm} {
     //padding: 0.5rem;
   }

@@ -69,13 +69,14 @@ export const SectionText = styled.p`
 
 export const SectionDivider = styled.div`
     z-index:2;
-    aspect-ratio: 960/200;
+    aspect-ratio: 960/300;
     width:100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(/svgs/wave-haikei.svg);
-    transform: ${(props) => props.flip ? 'rotate(180deg)' : 'rotate(0)'}
+    transform: ${(props) => props.flip ? 'rotate(180deg)' : 'rotate(0)'};
+    margin-bottom: -10px;
 `;
 
 export const SectionSubText = styled.p`

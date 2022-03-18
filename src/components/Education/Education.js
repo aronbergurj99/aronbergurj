@@ -1,40 +1,58 @@
-import { Section, SectionTitle, Container, SectionSubText, SectionSubTitle, SectionText} from "../../styles/GlobalComponents"
-import { Div1, Div2, Heading1, Text1, EducationContainer} from "./EducationStyles"
+import { Section, SectionTitle, Container, SectionSubText, SectionSubTitle, SectionText } from "../../styles/GlobalComponents"
+import { Div1, Div2, Heading1, Text1, EducationContainer } from "./EducationStyles"
 import Visible from "../Visible/Visible"
+import AnimatedTitle from "../../styles/GlobalComponents/AnimatedTitle"
+import {education} from '../constants/constants';
+import {motion} from 'framer-motion';
+
+function EducucationCard(props) {
+    const {item, index} = props;
+    const {school, education, date} = item;
+    return(
+        <EducationContainer
+            as={motion.div}
+            initial={{
+                opacity: 0,
+            }}
+            whileInView={{ 
+                opacity: 1,
+            }}
+            transition={{
+                duration: 0.8,
+                delay: 0.5 * index + 1,
+            }}
+            viewport={{ once: true }}
+        >
+            <Div2>
+                <Heading1>{school}</Heading1>
+            </Div2>
+            <Div1>
+                <Text1>{education}</Text1>
+            </Div1>
+            <Div2>
+                <Text1>{date}</Text1>
+            </Div2>
+        </EducationContainer>
+    )
+}
 
 export default function Education() {
+
     return (
-        <Section 
+        <Section
             blue
             front
             id="education"
-            
-            >
+
+        >
             <Container>
                 <Visible label="Education"></Visible>
-                <SectionTitle>Education</SectionTitle>
-                <EducationContainer>
-                    <Div2>
-                        <Heading1>Háskólinn í Reykjavík</Heading1>
-                    </Div2>
-                    <Div1>
-                        <Text1>Computer Science BSc</Text1>
-                    </Div1>
-                    <Div2>
-                        <Text1>2020 - today</Text1>
-                    </Div2>
-                </EducationContainer>
-                <EducationContainer>
-                    <Div2>
-                        <Heading1>Fjölbrautaskólinn í Breiðhollti</Heading1>
-                    </Div2>
-                    <Div1>
-                        <Text1>Matriculation course of natural science</Text1>
-                    </Div1>
-                    <Div2>
-                        <Text1>2015 - 2019</Text1>
-                    </Div2>
-                </EducationContainer>
+                <AnimatedTitle>Education</AnimatedTitle>
+                {education.map((item, i) => {
+                    return (
+                        <EducucationCard key={i} index={i} item={item}/>
+                    )
+                })}
             </Container>
         </Section>
     )

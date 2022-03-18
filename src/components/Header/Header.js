@@ -39,9 +39,9 @@ export default function Header() {
 
             </Div2>
             <Div3>
-                <Link href="#github">
+                <a href="https://github.com/aronbj20" target="_blank">
                     <p style={{color: "white", cursor: "pointer"}}><AiFillGithub size="3rem"/></p>
-                </Link>
+                </a>
             </Div3>
         </Container>
     )
